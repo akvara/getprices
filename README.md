@@ -1,0 +1,2 @@
+# getprices
+MetaStock data
