@@ -31,10 +31,15 @@ def put_data(tickers):
         for ticker in tickers:
             normalized_ticker = strip_country(ticker)
             print("Getting {} ...".format(normalized_ticker))
-            for row in get_quotes(ticker):
-                spam_writer.writerow(convert_format(row.split(','), normalized_ticker))
-                lines += 1
-            count_tickers += 1
+            try:
+                for row in get_quotes(ticker):
+                    converted = convert_format(row.split(','), normalized_ticker)
+                    if converted:
+                        spam_writer.writerow(converted)
+                    lines += 1
+                count_tickers += 1
+            except KeyError:
+                print("Ticker {} not found.".format(normalized_ticker))
     print('{} tickers totaling {} lines were written to to {}'.format(count_tickers, lines, output_file))
 
 
@@ -98,6 +103,8 @@ def get_data(symbol, start_date, end_date, cookie, crumb):
 
 # ----- Format converter -----
 def convert_format(csv_arr_row, ticker):
+    if csv_arr_row[HIGH] == 'null':
+        return None
     out = list()
     out.append(ticker)
     out.append(csv_arr_row[DATE].replace('-', ''))
