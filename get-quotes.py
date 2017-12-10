@@ -3,7 +3,7 @@ import datetime
 import re
 import sys
 import time
-
+import settings
 import requests
 
 HEADER = ['<TICKER>', '<DTYYYYMMDD>', '<OPEN>', '<HIGH>', '<LOW>', '<CLOSE>', '<VOL>']
@@ -17,8 +17,8 @@ VOLUME = 6
 OUTPUT_FILE_NAME = 'CSV.csv'
 OUTPUT_FOLDER = '/home/andrius/MEGA/OMX/'
 
-HISTORY_DAYS = 360
 QUERY_URL = "https://query1.finance.yahoo.com/v7/finance/download/{}?period1={}&period2={}&interval=1d&events=history&crumb={}"
+
 
 def put_data(tickers):
     output_file = OUTPUT_FOLDER + OUTPUT_FILE_NAME
@@ -83,7 +83,7 @@ def get_cookie_crumb(symbol):
 
 # ----- Quotes utilities -----
 def get_quotes(symbol):
-    start_date = int(time.mktime((datetime.datetime.now() + datetime.timedelta(-HISTORY_DAYS)).timetuple()))
+    start_date = int(time.mktime((datetime.datetime.now() + datetime.timedelta(-settings.HISTORY_DAYS)).timetuple()))
     end_date = int(time.time())
     cookie, crumb = get_cookie_crumb(symbol)
     return get_data(symbol, start_date, end_date, cookie, crumb)
@@ -111,8 +111,8 @@ def convert_format(csv_arr_row, ticker):
 
 if __name__ == '__main__':
     # If we have at least one parameter go ahead and loop over all the parameters assuming they are symbols
-    if len(sys.argv) == 1:
-        print("Usage: get-quotes.py SYMBOL")
-        sys.exit(-1)
+    # if len(sys.argv) == 1:
+    #     print("Usage: get-quotes.py SYMBOL")
+    #     sys.exit(-1)
 
-    put_data(sys.argv[1:])
+    put_data(settings.TICKERS)

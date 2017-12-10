@@ -3,4 +3,4 @@
 # python3 get-yahoo-quotes.py MORL SCO AGN
 # python3 convert-folder-quotes.py
 
-python3 get-quotes.py MORL SCO AGN VRX OLF1R.RG GRD1R.RG SAF1R.RG VSS1R.RG RKB1R.RG VLP1L.VS GRG1L.VS KNF1L.VS AUG1L.VS PTR1L.VS SAB1L.VS PZV1L.VS ZMP1L.VS TVEAT.TL OEG1T.TL SFG1T.TL TAL1T.TL TKM1T.TL
+python3 get-quotes.py

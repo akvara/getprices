@@ -3,3 +3,5 @@ quotes/*
 
 # exception to the rule
 !quotes/.gitkeep
+
+.idea/
