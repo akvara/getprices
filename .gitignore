@@ -5,3 +5,4 @@ quotes/*
 !quotes/.gitkeep
 
 .idea/
+__pycache__/

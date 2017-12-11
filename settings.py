@@ -15,6 +15,7 @@ TICKERS = [
     # Riga
     'OLF1R.RG',
     'GRD1R.RG',
+    'GRZE1R.RG',
     'SAF1R.RG',
     'VSS1R.RG',
     'RKB1R.RG',
@@ -31,6 +32,7 @@ TICKERS = [
     'IVL1L.VS',
     'APG1L.VS',
     'AMG1L.VS',
+    'LNA1L.VS',
     # Tallinn
     'TVEAT.TL',
     'OEG1T.TL',
@@ -40,7 +42,7 @@ TICKERS = [
 ]
 
 # For addition
-# HISTORY_DAYS = 360
+# HISTORY_DAYS = 1000
 # TICKERS = [
 #     'TEL1L.VS'
 # ]

@@ -1,10 +1,11 @@
 import csv
 import datetime
 import re
-import sys
 import time
-import settings
+
 import requests
+
+import settings
 
 HEADER = ['<TICKER>', '<DTYYYYMMDD>', '<OPEN>', '<HIGH>', '<LOW>', '<CLOSE>', '<VOL>']
 DATE = 0
