@@ -6,6 +6,8 @@ import time
 import requests
 
 import settings
+import ast
+
 
 HEADER = ['<TICKER>', '<DTYYYYMMDD>', '<OPEN>', '<HIGH>', '<LOW>', '<CLOSE>', '<VOL>']
 DATE = 0
@@ -104,7 +106,7 @@ def get_data(symbol, start_date, end_date, cookie, crumb):
 
 # ----- Format converter -----
 def convert_format(csv_arr_row, ticker):
-    if csv_arr_row[HIGH] == 'null':
+    if csv_arr_row[HIGH] == 'null' or ast.literal_eval(csv_arr_row[HIGH]) == 0:
         return None
     out = list()
     out.append(ticker)
