@@ -1,16 +1,16 @@
-HISTORY_DAYS = 10
 TICKERS = [
     # USA
-    'SPY',
-    'VOO',
-    'UBNT',
-    'TSLA',
+    'AGN',
     'AMAT',
-    'BIIB',
     'ARRY',
+    'BIIB',
     'MORL',
     'SCO',
-    'AGN',
+    'SPY',
+    'TSLA',
+    'TEVA',
+    'UBNT',
+    'VOO',
     'VRX',
     # Riga
     'GRD1R.RG',
@@ -44,8 +44,9 @@ TICKERS = [
     'TVEAT.TL',
 ]
 
+HISTORY_DAYS = 1000
+
 # For addition
-# HISTORY_DAYS = 2
 # TICKERS = [
-    # 'VSS1R.RG',
+    # 'TEVA',
 # ]
