@@ -37,6 +37,7 @@ TICKERS = [
     'VLP1L.VS',
     'ZMP1L.VS',
     # Tallinn
+    'HAE1T.TL',
     'OEG1T.TL',
     'SFG1T.TL',
     'TAL1T.TL',
@@ -44,9 +45,10 @@ TICKERS = [
     'TVEAT.TL',
 ]
 
-HISTORY_DAYS = 1000
+HISTORY_DAYS = 10
 
 # For addition
+# HISTORY_DAYS = 1000
 # TICKERS = [
-    # 'TEVA',
+    # 'HAE1T.TL',
 # ]
