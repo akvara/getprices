@@ -43,6 +43,8 @@ TICKERS = [
     'TAL1T.TL',
     'TKM1T.TL',
     'TVEAT.TL',
+    # etc
+    'BTCUSD=X',
 ]
 
 HISTORY_DAYS = 10
@@ -50,5 +52,5 @@ HISTORY_DAYS = 10
 # For addition
 # HISTORY_DAYS = 1000
 # TICKERS = [
-    # 'HAE1T.TL',
+    # 'BTCUSD=X',
 # ]
