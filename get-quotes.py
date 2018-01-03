@@ -43,7 +43,7 @@ def put_data(tickers):
                 count_tickers += 1
             except KeyError:
                 print("Ticker {} not found.".format(normalized_ticker))
-    print('{} tickers totaling {} lines were written to to {}'.format(count_tickers, lines, output_file))
+    print('Date {}, {} tickers, {} lines, file {}'.format(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"), count_tickers, lines, output_file))
 
 
 def strip_country(ticker):
@@ -120,9 +120,4 @@ def convert_format(csv_arr_row, ticker):
 
 
 if __name__ == '__main__':
-    # If we have at least one parameter go ahead and loop over all the parameters assuming they are symbols
-    # if len(sys.argv) == 1:
-    #     print("Usage: get-quotes.py SYMBOL")
-    #     sys.exit(-1)
-
     put_data(settings.TICKERS)
