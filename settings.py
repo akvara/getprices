@@ -4,6 +4,7 @@ TICKERS = [
     'AMAT',
     'ARRY',
     'BIIB',
+    'BIVV',
     'MORL',
     'SCO',
     'SPY',
@@ -49,8 +50,8 @@ TICKERS = [
 
 HISTORY_DAYS = 10
 
-# For addition
+""" For addition """
 # HISTORY_DAYS = 1000
 # TICKERS = [
-    # 'BTCUSD=X',
+    # 'BIVV',
 # ]
