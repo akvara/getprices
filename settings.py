@@ -13,6 +13,7 @@ TICKERS = [
     'UBNT',
     'VOO',
     'VRX',
+    'VUSA.AS',
     # Riga
     'GRD1R.RG',
     'GZE1R.RG',
@@ -53,5 +54,5 @@ HISTORY_DAYS = 10
 """ For addition """
 # HISTORY_DAYS = 1000
 # TICKERS = [
-    # 'BIVV',
+    # 'VUSA.AS',
 # ]
