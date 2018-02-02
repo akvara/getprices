@@ -47,6 +47,7 @@ TICKERS = [
     'TVEAT.TL',
     # etc
     'BTCUSD=X',
+    'CL=F',
 ]
 
 HISTORY_DAYS = 10
@@ -54,5 +55,5 @@ HISTORY_DAYS = 10
 """ For addition """
 # HISTORY_DAYS = 1000
 # TICKERS = [
-    # 'VUSA.AS',
+    # 'CL=F',
 # ]
