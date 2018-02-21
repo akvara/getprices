@@ -7,6 +7,7 @@ import requests
 
 import settings
 import ast
+import sys
 
 
 HEADER = ['<TICKER>', '<DTYYYYMMDD>', '<OPEN>', '<HIGH>', '<LOW>', '<CLOSE>', '<VOL>']
@@ -33,17 +34,21 @@ def put_data(tickers):
         spam_writer.writerow(HEADER)
         for ticker in tickers:
             normalized_ticker = strip_country(ticker)
-            print("Getting {} ...".format(normalized_ticker))
+            sys.stdout.write("Getting {} ...".format(normalized_ticker))
+            last = None
             try:
                 for row in get_quotes(ticker):
                     converted = convert_format(row.split(','), normalized_ticker)
                     if converted:
+                        last = converted[DATE+1][4:]
                         spam_writer.writerow(converted)
                     lines += 1
+                sys.stdout.write(last)
+                sys.stdout.write('\n')
                 count_tickers += 1
             except KeyError:
-                print("Ticker {} not found.".format(normalized_ticker))
-    print('Date {}, {} tickers, {} lines, file {}'.format(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"), count_tickers, lines, output_file))
+                sys.stdout.write("Ticker {} not found.\n".format(normalized_ticker))
+    sys.stdout.write('Date {}, {} tickers, {} lines, file {}\n'.format(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"), count_tickers, lines, output_file))
 
 
 def strip_country(ticker):
@@ -106,7 +111,7 @@ def get_data(symbol, start_date, end_date, cookie, crumb):
 
 # ----- Format converter -----
 def convert_format(csv_arr_row, ticker):
-    if csv_arr_row[HIGH] == 'null' or ast.literal_eval(csv_arr_row[HIGH]) == 0:
+    if len(csv_arr_row) < 1 or csv_arr_row[HIGH] == 'null' or ast.literal_eval(csv_arr_row[HIGH]) == 0:
         return None
     out = list()
     out.append(ticker)

@@ -55,5 +55,5 @@ HISTORY_DAYS = 10
 """ For addition """
 # HISTORY_DAYS = 1000
 # TICKERS = [
-    # 'CL=F',
+    # 'TEL1L.VS',
 # ]
