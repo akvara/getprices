@@ -19,7 +19,7 @@ CLOSE = 4
 VOLUME = 6
 
 OUTPUT_FILE_NAME = 'CSV.csv'
-OUTPUT_FOLDER = '/home/andrius/MEGA/OMX/'
+OUTPUT_FOLDER = '../Documents/MEGA/OMX/'
 
 QUERY_URL = "https://query1.finance.yahoo.com/v7/finance/download/{}?period1={}&period2={}&interval=1d&events=history&crumb={}"
 
