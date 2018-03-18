@@ -19,13 +19,13 @@ CLOSE = 4
 VOLUME = 6
 
 OUTPUT_FILE_NAME = 'CSV.csv'
-OUTPUT_FOLDER = '../Documents/MEGA/OMX/'
+OUTPUT_FOLDER = '/home/andrius/MEGA/OMX/'
 
 QUERY_URL = "https://query1.finance.yahoo.com/v7/finance/download/{}?period1={}&period2={}&interval=1d&events=history&crumb={}"
 
 
-def put_data(tickers):
-    output_file = OUTPUT_FOLDER + OUTPUT_FILE_NAME
+def put_data(tickers, output_folder):
+    output_file = output_folder + OUTPUT_FILE_NAME
     lines = 0
     count_tickers = 0
 
@@ -43,7 +43,7 @@ def put_data(tickers):
                         last = converted[DATE+1][4:]
                         spam_writer.writerow(converted)
                     lines += 1
-                sys.stdout.write(last)
+                sys.stdout.write(last if last else '----')
                 sys.stdout.write('\n')
                 count_tickers += 1
             except KeyError:
@@ -125,4 +125,7 @@ def convert_format(csv_arr_row, ticker):
 
 
 if __name__ == '__main__':
-    put_data(settings.TICKERS)
+    output_folder = OUTPUT_FOLDER
+    if len(sys.argv) > 1:
+        output_folder = sys.argv[1]
+    put_data(settings.TICKERS, output_folder)

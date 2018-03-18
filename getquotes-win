@@ -3,4 +3,4 @@
 # python3 get-yahoo-quotes.py MORL SCO AGN
 # python3 convert-folder-quotes.py
 
-python get-quotes.py
+python get-quotes.py '../Documents/MEGA/OMX/'

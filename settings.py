@@ -46,14 +46,16 @@ TICKERS = [
     'TKM1T.TL',
     'TVEAT.TL',
     # etc
-    'BTCUSD=X',
+    'BTC-USD',
+    'ETH-USD',
     'CL=F',
 ]
 
 HISTORY_DAYS = 10
 
 """ For addition """
-# HISTORY_DAYS = 1000
-# TICKERS = [
-    # 'TEL1L.VS',
-# ]
+HISTORY_DAYS = 1000
+TICKERS = [
+    'BTC-USD',
+    'ETH-USD',
+]
