@@ -54,8 +54,7 @@ TICKERS = [
 HISTORY_DAYS = 10
 
 """ For addition """
-HISTORY_DAYS = 1000
-TICKERS = [
-    'BTC-USD',
-    'ETH-USD',
-]
+# HISTORY_DAYS = 1000
+# TICKERS = [
+    # 'ETH-USD',
+# ]
