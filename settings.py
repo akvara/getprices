@@ -1,5 +1,14 @@
 TICKERS = [
     # USA
+    'AAPL',
+    'AMZN',
+    'NFLX',
+    'JCP',
+    'CF',
+    'GT',
+    'USAK',
+    'MSFT',
+    'GOOG',
     'AGN',
     'AMAT',
     'ARRY',
@@ -53,8 +62,8 @@ TICKERS = [
 
 HISTORY_DAYS = 10
 
-""" For addition """
+# """ For addition """
 # HISTORY_DAYS = 1000
 # TICKERS = [
-    # 'ETH-USD',
+    # 'USAK',
 # ]
