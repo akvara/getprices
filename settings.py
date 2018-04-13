@@ -12,8 +12,6 @@ TICKERS = [
     'AGN',
     'AMAT',
     'ARRY',
-    'BIIB',
-    'BIVV',
     'MORL',
     'SCO',
     'SPY',

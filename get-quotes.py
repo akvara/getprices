@@ -78,7 +78,10 @@ def get_cookie_value(r):
 
 def get_page_data(symbol):
     url = "https://finance.yahoo.com/quote/%s/?p=%s" % (symbol, symbol)
-    r = requests.get(url)
+    try:
+        r = requests.get(url, timeout=10)
+    except requests.exceptions.ReadTimeout:
+        return None, None
     cookie = get_cookie_value(r)
 
     # Code to replace possible \u002F value
@@ -103,6 +106,8 @@ def get_quotes(symbol):
 
 
 def get_data(symbol, start_date, end_date, cookie, crumb):
+    if not cookie:
+        return None
     url = QUERY_URL.format(symbol, start_date, end_date, crumb)
     response = requests.get(url, cookies=cookie)
     data = [s.strip() for s in response.text.splitlines()]
