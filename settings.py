@@ -1,22 +1,18 @@
 TICKERS = [
     # USA
     'AAPL',
-    'AMZN',
     'NFLX',
     'JCP',
-    'CF',
     'GT',
     'USAK',
-    'MSFT',
-    'GOOG',
     'AGN',
     'AMAT',
     'ARRY',
-    'BIIB',
-    'BIVV',
+    'BABA',
     'MORL',
     'SCO',
     'SPY',
+    '^GSPC',
     'TSLA',
     'TEVA',
     'UBNT',
@@ -24,6 +20,7 @@ TICKERS = [
     'VRX',
     'VUSA.AS',
     # Riga
+    'BAL1R.RG',
     'GRD1R.RG',
     'GZE1R.RG',
     'OLF1R.RG',
@@ -41,15 +38,14 @@ TICKERS = [
     'LGD1L.VS',
     'LNA1L.VS',
     'LNR1L.VS',
+    'NTU1L.VS',
     'PTR1L.VS',
-    'PZV1L.VS',
     'SAB1L.VS',
     'TEL1L.VS',
     'VLP1L.VS',
     'ZMP1L.VS',
     # Tallinn
     'HAE1T.TL',
-    'OEG1T.TL',
     'SFG1T.TL',
     'TAL1T.TL',
     'TKM1T.TL',
@@ -65,5 +61,5 @@ HISTORY_DAYS = 10
 # """ For addition """
 # HISTORY_DAYS = 1000
 # TICKERS = [
-    # 'USAK',
+# 'USAK',
 # ]

@@ -9,7 +9,6 @@ import settings
 import ast
 import sys
 
-
 HEADER = ['<TICKER>', '<DTYYYYMMDD>', '<OPEN>', '<HIGH>', '<LOW>', '<CLOSE>', '<VOL>']
 DATE = 0
 OPEN = 1
@@ -37,10 +36,11 @@ def put_data(tickers, output_folder):
             sys.stdout.write("Getting {} ...".format(normalized_ticker))
             last = None
             try:
-                for row in get_quotes(ticker):
+                quotes = get_quotes(ticker)
+                for row in quotes:
                     converted = convert_format(row.split(','), normalized_ticker)
                     if converted:
-                        last = converted[DATE+1][4:]
+                        last = converted[DATE + 1][4:]
                         spam_writer.writerow(converted)
                     lines += 1
                 sys.stdout.write(last if last else '----')
@@ -48,7 +48,9 @@ def put_data(tickers, output_folder):
                 count_tickers += 1
             except KeyError:
                 sys.stdout.write("Ticker {} not found.\n".format(normalized_ticker))
-    sys.stdout.write('Date {}, {} tickers, {} lines, file {}\n'.format(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"), count_tickers, lines, output_file))
+    sys.stdout.write(
+        'Date {}, {} tickers, {} lines, file {}\n'.format(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
+                                                          count_tickers, lines, output_file))
 
 
 def strip_country(ticker):
@@ -77,14 +79,15 @@ def get_cookie_value(r):
 
 
 def get_page_data(symbol):
-    url = "https://finance.yahoo.com/quote/%s/?p=%s" % (symbol, symbol)
+    # url = "https://finance.yahoo.com/quote/%s/?p=%s" % (symbol, symbol)
+    url = "https://finance.yahoo.com/quote/%s/history?p=%s" % (symbol, symbol)
     r = requests.get(url)
     cookie = get_cookie_value(r)
 
     # Code to replace possible \u002F value
     # ,"CrumbStore":{"crumb":"FWP\u002F5EFll3U"
     # FWP\u002F5EFll3U
-    lines = r.content.decode('unicode-escape').strip(). replace('}', '\n')
+    lines = r.content.decode('unicode-escape').strip().replace('}', '\n')
     return cookie, lines.split('\n')
 
 
@@ -104,7 +107,7 @@ def get_quotes(symbol):
 
 def get_data(symbol, start_date, end_date, cookie, crumb):
     url = QUERY_URL.format(symbol, start_date, end_date, crumb)
-    response = requests.get(url, cookies=cookie)
+    response = requests.get(url, cookies=cookie, timeout=5)
     data = [s.strip() for s in response.text.splitlines()]
     return data[1:]
 
