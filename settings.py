@@ -8,7 +8,6 @@ TICKERS = [
     'AGN',
     'AMAT',
     'ARRY',
-    'BABA',
     'MORL',
     'SCO',
     'SPY',
@@ -61,5 +60,5 @@ HISTORY_DAYS = 10
 # """ For addition """
 # HISTORY_DAYS = 1000
 # TICKERS = [
-# 'USAK',
+    # 'USAK',
 # ]
