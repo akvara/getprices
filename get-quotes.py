@@ -1,14 +1,13 @@
+import ast
 import csv
 import datetime
 import re
+import sys
 import time
-
+from requests.exceptions import ConnectionError, RequestException, ReadTimeout
 import requests
 
 import settings
-import ast
-import sys
-
 
 HEADER = ['<TICKER>', '<DTYYYYMMDD>', '<OPEN>', '<HIGH>', '<LOW>', '<CLOSE>', '<VOL>']
 DATE = 0
@@ -48,8 +47,8 @@ def put_data(tickers, output_folder):
                 sys.stdout.write(last if last else '----')
                 sys.stdout.write('\n')
                 count_tickers += 1
-            except KeyError:
-                sys.stdout.write("Ticker {} not found.\n".format(normalized_ticker))
+            except (KeyError, TypeError) as error:
+                sys.stdout.write("Ticker {} not found: {}.\n".format(normalized_ticker, error))
     sys.stdout.write(
         'Date {}, {} tickers, {} lines, file {}\n'.format(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
                                                           count_tickers, lines, output_file))
@@ -64,12 +63,16 @@ def strip_country(ticker):
 
 # ----- Crumb utilities -----
 def split_crumb_store(v):
+    if not v:
+        return None
     return v.split(':')[2].strip('"')
 
 
 def find_crumb_store(lines):
     # Looking for
     # ,"CrumbStore":{"crumb":"9q.A4D1c.b9
+    if not lines:
+        return None
     for l in lines:
         if re.findall(r'CrumbStore', l):
             return l
@@ -84,7 +87,9 @@ def get_page_data(symbol):
     url = "https://finance.yahoo.com/quote/%s/?p=%s" % (symbol, symbol)
     try:
         r = requests.get(url, timeout=10)
-    except requests.exceptions.ReadTimeout:
+    except ConnectionError:
+        return None, None
+    except RequestException:
         return None, None
     cookie = get_cookie_value(r)
 
@@ -113,7 +118,10 @@ def get_data(symbol, start_date, end_date, cookie, crumb):
     if not cookie:
         return None
     url = QUERY_URL.format(symbol, start_date, end_date, crumb)
-    response = requests.get(url, cookies=cookie, timeout=5)
+    try:
+        response = requests.get(url, cookies=cookie, timeout=10)
+    except (ConnectionError, ReadTimeout):
+        return None
     data = [s.strip() for s in response.text.splitlines()]
     return data[1:]
 
