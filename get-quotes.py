@@ -4,8 +4,9 @@ import datetime
 import re
 import sys
 import time
-from requests.exceptions import ConnectionError, RequestException, ReadTimeout
+
 import requests
+from requests.exceptions import ConnectionError, RequestException, ReadTimeout
 
 import settings
 
@@ -19,7 +20,6 @@ VOLUME = 6
 
 OUTPUT_FILE_NAME = 'CSV.csv'
 OUTPUT_FOLDER = '/home/andrius/MEGA/OMX/'
-# OUTPUT_FOLDER = '~/Documents/MEGA/OMX/'
 
 QUERY_URL = "https://query1.finance.yahoo.com/v7/finance/download/{}?period1={}&period2={}&interval=1d&events=history&crumb={}"
 
@@ -119,7 +119,7 @@ def get_data(symbol, start_date, end_date, cookie, crumb):
         return None
     url = QUERY_URL.format(symbol, start_date, end_date, crumb)
     try:
-        response = requests.get(url, cookies=cookie, timeout=10)
+        response = requests.get(url, cookies=cookie, timeout=15)
     except (ConnectionError, ReadTimeout):
         return None
     data = [s.strip() for s in response.text.splitlines()]
