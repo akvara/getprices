@@ -24,7 +24,7 @@ OUTPUT_FOLDER = '/home/andrius/MEGA/OMX/'
 QUERY_URL = "https://query1.finance.yahoo.com/v7/finance/download/{}?period1={}&period2={}&interval=1d&events=history&crumb={}"
 
 
-def put_data(tickers, output_folder):
+def put_data(tickers, output_folder, history):
     output_file = output_folder + OUTPUT_FILE_NAME
     lines = 0
     count_tickers = 0
@@ -37,7 +37,7 @@ def put_data(tickers, output_folder):
             sys.stdout.write("Getting {} ...".format(normalized_ticker))
             last = None
             try:
-                quotes = get_quotes(ticker)
+                quotes = get_quotes(ticker, history)
                 for row in quotes:
                     converted = convert_format(row.split(','), normalized_ticker)
                     if converted:
@@ -107,8 +107,8 @@ def get_cookie_crumb(symbol):
 
 
 # ----- Quotes utilities -----
-def get_quotes(symbol):
-    start_date = int(time.mktime((datetime.datetime.now() + datetime.timedelta(-settings.HISTORY_DAYS)).timetuple()))
+def get_quotes(symbol, history):
+    start_date = int(time.mktime((datetime.datetime.now() + datetime.timedelta(-history)).timetuple()))
     end_date = int(time.time())
     cookie, crumb = get_cookie_crumb(symbol)
     return get_data(symbol, start_date, end_date, cookie, crumb)
@@ -143,6 +143,10 @@ def convert_format(csv_arr_row, ticker):
 
 if __name__ == '__main__':
     output_folder = OUTPUT_FOLDER
+    history = settings.HISTORY_DAYS
+
     if len(sys.argv) > 1:
         output_folder = sys.argv[1]
-    put_data(settings.TICKERS, output_folder)
+    if len(sys.argv) > 2:
+        history = int(sys.argv[2])
+    put_data(settings.TICKERS, output_folder, history)
