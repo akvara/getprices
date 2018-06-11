@@ -18,6 +18,7 @@ TICKERS = [
     'VOO',
     'VRX',
     'VUSA.AS',
+    'CSPX.AS',
     # Riga
     'BAL1R.RG',
     'GRD1R.RG',
@@ -55,10 +56,11 @@ TICKERS = [
     'CL=F',
 ]
 
-HISTORY_DAYS = 10
+HISTORY_DAYS = 14
 
-# """ For addition """
-# HISTORY_DAYS = 1000
-# TICKERS = [
-    # 'USAK',
-# ]
+""" For addition """
+HISTORY_DAYS = 1000
+TICKERS = [
+    CSPX.AS,
+    EMAE:MI,
+]
