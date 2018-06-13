@@ -28,6 +28,8 @@ TICKERS = [
     'RKB1R.RG',
     'SAF1R.RG',
     'VSS1R.RG',
+    # check
+    'TSM1T.RG',
     # Vilnius
     'AMG1L.VS',
     'APG1L.VS',
