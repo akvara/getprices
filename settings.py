@@ -1,9 +1,7 @@
 TICKERS = [
     # USA
-    'AAPL',
-    'NFLX',
-    'JCP',
-    'GT',
+    'AMD',
+    'NVDA',
     'USAK',
     'AGN',
     'AMAT',
@@ -11,7 +9,6 @@ TICKERS = [
     'MORL',
     'SCO',
     'SPY',
-    '^GSPC',
     'TSLA',
     'TEVA',
     'UBNT',
@@ -28,8 +25,6 @@ TICKERS = [
     'RKB1R.RG',
     'SAF1R.RG',
     'VSS1R.RG',
-    # check
-    'TSM1T.RG',
     # Vilnius
     'AMG1L.VS',
     'APG1L.VS',
@@ -52,6 +47,7 @@ TICKERS = [
     'SFG1T.TL',
     'TAL1T.TL',
     'TKM1T.TL',
+    'TSM1T.TL',
     'TVEAT.TL',
     # etc
     'BTC-USD',
