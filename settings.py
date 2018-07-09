@@ -17,6 +17,7 @@ TICKERS = [
     'VUSA.AS',
     'CSPX.AS',
     'EMAE.PA',
+    'ZPRR.DE',
     # Riga
     'BAL1R.RG',
     'GRD1R.RG',
