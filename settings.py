@@ -5,7 +5,6 @@ TICKERS = [
     'USAK',
     'AGN',
     'AMAT',
-    'ARRY',
     'MORL',
     'SCO',
     'SPY',
@@ -13,11 +12,16 @@ TICKERS = [
     'TEVA',
     'UBNT',
     'VOO',
-    'VRX',
+    'BHC',
     'VUSA.AS',
     'CSPX.AS',
     'EMAE.PA',
     'ZPRR.DE',
+    # Indices
+    '^GSPC',
+    '^DJI',
+    '^RUT',
+    '^VIX',
     # Riga
     'BAL1R.RG',
     'GRD1R.RG',
@@ -61,6 +65,8 @@ HISTORY_DAYS = 14
 """ For addition """
 # HISTORY_DAYS = 1000
 # TICKERS = [
-    # 'CSPX.AS',
-    # 'EMAE.PA',
+    # '^GSPC',
+    # '^DJI',
+    # '^RUT',
+    # '^VIX',
 # ]
