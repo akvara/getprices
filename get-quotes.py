@@ -11,12 +11,12 @@ from requests.exceptions import ConnectionError, RequestException, ReadTimeout
 import settings
 
 HEADER = ['<TICKER>', '<DTYYYYMMDD>', '<OPEN>', '<HIGH>', '<LOW>', '<CLOSE>', '<VOL>']
-DATE = 0
-OPEN = 1
-HIGH = 2
-LOW = 3
-CLOSE = 4
-VOLUME = 6
+C_DATE = 0
+C_OPEN = 1
+C_HIGH = 2
+C_LOW = 3
+C_CLOSE = 4
+C_VOLUME = 6
 
 OUTPUT_FILE_NAME = 'CSV.csv'
 OUTPUT_FOLDER = '/home/andrius/MEGA/OMX/'
@@ -41,7 +41,7 @@ def put_data(tickers, output_folder, history):
                 for row in quotes:
                     converted = convert_format(row.split(','), normalized_ticker)
                     if converted:
-                        last = converted[DATE + 1][4:]
+                        last = converted[C_DATE + 1][4:]
                         spam_writer.writerow(converted)
                     lines += 1
                 sys.stdout.write(last if last else '----')
@@ -126,18 +126,24 @@ def get_data(symbol, start_date, end_date, cookie, crumb):
     return data[1:]
 
 
+def fix_low(row):
+    if float(row[C_LOW]) > 0:
+        return row[C_LOW]
+    return str(min(float(row[C_OPEN]), float(row[C_CLOSE])))
+
+
 # ----- Format converter -----
 def convert_format(csv_arr_row, ticker):
-    if len(csv_arr_row) < 1 or csv_arr_row[HIGH] == 'null' or ast.literal_eval(csv_arr_row[HIGH]) == 0:
+    if len(csv_arr_row) < 1 or csv_arr_row[C_HIGH] == 'null' or ast.literal_eval(csv_arr_row[C_HIGH]) == 0:
         return None
     out = list()
     out.append(ticker)
-    out.append(csv_arr_row[DATE].replace('-', ''))
-    out.append(csv_arr_row[OPEN])
-    out.append(csv_arr_row[HIGH])
-    out.append(csv_arr_row[LOW])
-    out.append(csv_arr_row[CLOSE])
-    out.append(csv_arr_row[VOLUME])
+    out.append(csv_arr_row[C_DATE].replace('-', ''))
+    out.append(csv_arr_row[C_OPEN])
+    out.append(csv_arr_row[C_HIGH])
+    out.append(fix_low(csv_arr_row))
+    out.append(csv_arr_row[C_CLOSE])
+    out.append(csv_arr_row[C_VOLUME])
     return out
 
 
