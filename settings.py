@@ -67,5 +67,5 @@ HISTORY_DAYS = 14
 """ For addition """
 # HISTORY_DAYS = 2000
 # TICKERS = [
-    'CNDX.AS',
+    # 'CNDX.AS',
 # ]
