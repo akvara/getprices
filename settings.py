@@ -16,9 +16,11 @@ TICKERS = [
     'VUSA.AS',
     'CSPX.AS',
     'EMAE.PA',
+    'CNDX.AS',
     'ZPRR.DE',
     # Indices
     '^GSPC',
+    '^IXIC',
     '^DJI',
     '^RUT',
     '^VIX',
@@ -63,10 +65,7 @@ TICKERS = [
 HISTORY_DAYS = 14
 
 """ For addition """
-# HISTORY_DAYS = 1000
+# HISTORY_DAYS = 2000
 # TICKERS = [
-    # '^GSPC',
-    # '^DJI',
-    # '^RUT',
-    # '^VIX',
+    'CNDX.AS',
 # ]
