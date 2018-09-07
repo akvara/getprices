@@ -63,10 +63,10 @@ TICKERS = [
     'CL=F',
 ]
 
-HISTORY_DAYS = 14
+HISTORY_DAYS = 7
 
 # """ For addition """
-HISTORY_DAYS = 2000
-TICKERS = [
-    '3OIS.MI',
-]
+# HISTORY_DAYS = 2000
+# TICKERS = [
+    # '3OIS.MI',
+# ]
