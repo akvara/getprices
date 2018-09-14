@@ -1,11 +1,13 @@
 TICKERS = [
     # USA
     'AMD',
+    'AMZN',
     'NVDA',
     'USAK',
     'AGN',
     'AMAT',
     'MORL',
+    'MU',
     'SCO',
     'SPY',
     'TSLA',
@@ -68,5 +70,6 @@ HISTORY_DAYS = 7
 # """ For addition """
 # HISTORY_DAYS = 2000
 # TICKERS = [
-    # '3OIS.MI',
+#     'AMZN',
+#     'MU',
 # ]
