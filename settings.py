@@ -59,6 +59,7 @@ TICKERS = [
     'TKM1T.TL',
     'TSM1T.TL',
     'TVEAT.TL',
+    'PRF1T.TL',
     # etc
     'BTC-USD',
     'ETH-USD',
@@ -68,8 +69,8 @@ TICKERS = [
 HISTORY_DAYS = 7
 
 # """ For addition """
+
 # HISTORY_DAYS = 2000
 # TICKERS = [
-#     'AMZN',
-#     'MU',
+    # 'PRF1T.TL',
 # ]
