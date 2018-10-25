@@ -15,6 +15,8 @@ TICKERS = [
     'UBNT',
     'VOO',
     'BHC',
+    'DSX',
+    'NMM',
     'VUSA.AS',
     'CSPX.AS',
     'EMAE.PA',
@@ -68,9 +70,9 @@ TICKERS = [
 
 HISTORY_DAYS = 7
 
-# """ For addition """
-
+""" For addition """
 # HISTORY_DAYS = 2000
 # TICKERS = [
-    # 'PRF1T.TL',
+    # 'DSX',
+    # 'NMM',
 # ]
