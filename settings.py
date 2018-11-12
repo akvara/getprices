@@ -1,6 +1,7 @@
 TICKERS = [
     # USA
     'AMD',
+    'AAPL',
     'AMZN',
     'NVDA',
     'USAK',
@@ -12,6 +13,7 @@ TICKERS = [
     'SPY',
     'TSLA',
     'TEVA',
+    'TWTR',
     'UBNT',
     'VOO',
     'BHC',
