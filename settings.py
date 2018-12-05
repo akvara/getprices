@@ -24,6 +24,7 @@ TICKERS = [
     'EMAE.PA',
     'CNDX.AS',
     'ZPRR.DE',
+    'SXR8.DE',
     '3OIS.MI',
     # Indices
     '^GSPC',
@@ -75,6 +76,5 @@ HISTORY_DAYS = 7
 """ For addition """
 # HISTORY_DAYS = 2000
 # TICKERS = [
-    # 'DSX',
-    # 'NMM',
+    # 'SXR8.DE',
 # ]
