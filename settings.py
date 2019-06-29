@@ -1,11 +1,15 @@
 TICKERS = [
     # USA
     'AAPL',
+    'ABBV',
     'AMD',
     'AGN',
     'AMAT',
     'AMZN',
     'BHC',
+    'BYND',
+    'SNAP',
+    'CLF',
     'DSX',
     'NVDA',
     'USAK',
@@ -13,11 +17,14 @@ TICKERS = [
     'NMM',
     'MORL',
     'MU',
+    'OMER',
+    'QCOM',
     'SCO',
     'SPY',
     'TSLA',
     'TEVA',
     'TWTR',
+    'UBER',
     'UBNT',
     'VOO',
     'VUSA.AS',
@@ -46,6 +53,7 @@ TICKERS = [
     'APG1L.VS',
     'AUG1L.VS',
     'ESO1L.VS',
+    'EWA1L.RG',
     'GRG1L.VS',
     'IVL1L.VS',
     'KNF1L.VS',
@@ -74,8 +82,8 @@ TICKERS = [
 
 HISTORY_DAYS = 7
 
-""" For addition """
+# """ For addition """
 # HISTORY_DAYS = 2000
 # TICKERS = [
-    # 'SXR8.DE',
+    # 'ABBV',
 # ]
