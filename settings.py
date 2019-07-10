@@ -34,6 +34,8 @@ TICKERS = [
     'ZPRR.DE',
     'SXR8.DE',
     '3OIS.MI',
+    'IFX.DE',
+
     # Indices
     '^GSPC',
     '^IXIC',
@@ -74,6 +76,8 @@ TICKERS = [
     'TSM1T.TL',
     'TVEAT.TL',
     'PRF1T.TL',
+    'MRK1T.TL',
+
     # etc
     'BTC-USD',
     'ETH-USD',
@@ -82,8 +86,9 @@ TICKERS = [
 
 HISTORY_DAYS = 7
 
-# """ For addition """
+# """ For addition """ 5 lines
 # HISTORY_DAYS = 2000
 # TICKERS = [
-    # 'ABBV',
+    # 'MRK1T.TL',
+    # 'IFX.DE',
 # ]
