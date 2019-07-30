@@ -150,9 +150,13 @@ def convert_format(csv_arr_row, ticker):
 if __name__ == '__main__':
     output_folder = OUTPUT_FOLDER
     history = settings.HISTORY_DAYS
+    tickers = settings.TICKERS
 
     if len(sys.argv) > 1:
         output_folder = sys.argv[1]
     if len(sys.argv) > 2:
         history = int(sys.argv[2])
-    put_data(settings.TICKERS, output_folder, history)
+    if len(sys.argv) > 3:
+        tickers = [sys.argv[3]]
+
+    put_data(tickers, output_folder, history)
