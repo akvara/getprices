@@ -27,6 +27,7 @@ TICKERS = [
     'UBER',
     'UBNT',
     'VOO',
+    'CSGLDE.SW',
     'VUSA.AS',
     'CSPX.AS',
     'EMAE.PA',
@@ -82,6 +83,7 @@ TICKERS = [
     'BTC-USD',
     'ETH-USD',
     'CL=F',
+    'GLD',
 ]
 
 HISTORY_DAYS = 7
