@@ -25,7 +25,7 @@ TICKERS = [
     'TEVA',
     'TWTR',
     'UBER',
-    'UBNT',
+    'UI',
     'VOO',
     'CSGLDE.SW',
     'VUSA.AS',
@@ -84,6 +84,7 @@ TICKERS = [
     'ETH-USD',
     'CL=F',
     'GLD',
+    '4GLD.SG',
 ]
 
 HISTORY_DAYS = 7
