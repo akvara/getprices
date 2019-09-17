@@ -10,7 +10,7 @@ TICKERS = [
     'BYND',
     'SNAP',
     'CLF',
-    'DSX',
+    'DNR',
     'NVDA',
     'USAK',
     'LMT',
