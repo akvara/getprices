@@ -7,13 +7,19 @@ TICKERS = [
     'AMAT',
     'AMZN',
     'BHC',
+    'BA',
     'BYND',
     'SNAP',
     'CLF',
     'DNR',
+    'CGC',
+    'FB',
     'NVDA',
+    'NOW',
+    'NFLX',
     'USAK',
     'LMT',
+    'LYFT',
     'NMM',
     'MORL',
     'MU',
@@ -35,6 +41,7 @@ TICKERS = [
     'ZPRR.DE',
     'SXR8.DE',
     '3OIS.MI',
+    '3OIL.L',
     'IFX.DE',
 
     # Indices
@@ -84,7 +91,7 @@ TICKERS = [
     'ETH-USD',
     'CL=F',
     'GLD',
-    '4GLD.SG',
+    'USO',
 ]
 
 HISTORY_DAYS = 7
