@@ -32,6 +32,7 @@ TICKERS = [
     'TWTR',
     'UBER',
     'UI',
+    'UA',
     'VOO',
     'CSGLDE.SW',
     'VUSA.AS',
