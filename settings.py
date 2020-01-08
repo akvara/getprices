@@ -78,6 +78,7 @@ TICKERS = [
     'VLP1L.VS',
     'ZMP1L.VS',
     # Tallinn
+    'CPA1T.TL',
     'HAE1T.TL',
     'SFG1T.TL',
     'TAL1T.TL',
