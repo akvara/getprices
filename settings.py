@@ -35,6 +35,7 @@ TICKERS = [
     'UBER',
     'UI',
     'USAK',
+    'ZM',
     'VOO',
 
     # EU

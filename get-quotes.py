@@ -97,7 +97,12 @@ def get_page_data(symbol):
     # Code to replace possible \u002F value
     # ,"CrumbStore":{"crumb":"FWP\u002F5EFll3U"
     # FWP\u002F5EFll3U
-    lines = r.content.decode('unicode-escape').strip().replace('}', '\n')
+    try:
+        lines = r.content.decode('unicode-escape').strip().replace('}', '\n')
+    except:
+        sys.stdout.write("Something wrong in data...")
+        return cookie, ""
+    # lines = r.content.decode('unicode-escape').strip().replace('}', '\n')
     return cookie, lines.split('\n')
 
 
