@@ -15,9 +15,9 @@ TICKERS = [
     'FB',
     'GIS',
     'GOOG',
+    'HTZ',
     'LMT',
     'LYFT',
-    'MORL',
     'MU',
     'NFLX',
     'NMM',
@@ -47,7 +47,6 @@ TICKERS = [
     'ZPRR.DE',
     'SXR8.DE',
     '3OIS.MI',
-    '3OIL.L',
     'IFX.DE',
 
     # Indices
