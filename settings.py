@@ -17,6 +17,7 @@ TICKERS = [
     'GS',
     'GOOG',
     'GILD',
+    'HTZ',
     'LMT',
     'LYFT',
     'MU',
