@@ -10,21 +10,24 @@ TICKERS = [
     'BHC',
     'BYND',
     'CGC',
-    'CLF',
     'DNR',
+    'DOCU',
     'FB',
     'GIS',
+    'GS',
     'GOOG',
+    'GILD',
     'LMT',
     'LYFT',
-    'MORL',
     'MU',
     'NFLX',
     'NMM',
     'NOW',
     'NVDA',
     'OMER',
+    'PENN',
     'QCOM',
+    'SBUX',
     'SCO',
     'SNAP',
     'SPY',
@@ -35,11 +38,10 @@ TICKERS = [
     'UBER',
     'UI',
     'USAK',
+    'XOM',
     'ZM',
-    'VOO',
 
     # EU
-    'CSGLDE.SW',
     'VUSA.AS',
     'CSPX.AS',
     'EMAE.PA',
@@ -47,7 +49,6 @@ TICKERS = [
     'ZPRR.DE',
     'SXR8.DE',
     '3OIS.MI',
-    '3OIL.L',
     'IFX.DE',
 
     # Indices
@@ -97,8 +98,8 @@ TICKERS = [
     'BTC-USD',
     'ETH-USD',
     'CL=F',
+    'BZ=F',
     'GLD',
-    'USO',
 ]
 
 HISTORY_DAYS = 7
