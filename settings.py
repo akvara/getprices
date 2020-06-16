@@ -2,7 +2,6 @@ TICKERS = [
     # USA
     'AAPL',
     'ABBV',
-    'AGN',
     'AMAT',
     'AMD',
     'AMZN',
@@ -43,13 +42,17 @@ TICKERS = [
     'ZM',
 
     # EU
-    'VUSA.AS',
-    'CSPX.AS',
-    'EMAE.PA',
-    'CNDX.AS',
-    'ZPRR.DE',
+    'PDX.ST',
+    # EU ETF
+    # 'VUSA.AS',
+    # 'CSPX.AS',
+    # 'EMAE.PA',
+    # 'CNDX.AS',
+    # 'ZPRR.DE',
+    # 'XAD1.MI',
     'SXR8.DE',
-    '3OIS.MI',
+    '4GLD.DE',
+    'EUNL.DE',
     'IFX.DE',
 
     # Indices
@@ -58,6 +61,7 @@ TICKERS = [
     '^DJI',
     '^RUT',
     '^VIX',
+
     # Riga
     'BAL1R.RG',
     'GRD1R.RG',
@@ -94,6 +98,7 @@ TICKERS = [
     'TKM1T.TL',
     'TSM1T.TL',
     'TVEAT.TL',
+    'NHCBHFFT.TL',
 
     # etc
     'BTC-USD',
