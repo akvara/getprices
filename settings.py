@@ -31,6 +31,7 @@ TICKERS = [
     'SCO',
     'SNAP',
     'SPY',
+    'ROKU',
     'TEVA',
     'TSLA',
     'TWTR',
@@ -54,6 +55,7 @@ TICKERS = [
     '4GLD.DE',
     'EUNL.DE',
     'IFX.DE',
+    'VZLC.SG',
 
     # Indices
     '^GSPC',
@@ -91,6 +93,7 @@ TICKERS = [
     # Tallinn
     'CPA1T.TL',
     'HAE1T.TL',
+    'LHV1T.LT',
     'MRK1T.TL',
     'PRF1T.TL',
     'SFG1T.TL',
