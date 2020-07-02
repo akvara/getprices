@@ -34,6 +34,7 @@ TICKERS = [
     'ROKU',
     'TEVA',
     'TSLA',
+    'TWLO',
     'TWTR',
     'UA',
     'UBER',
