@@ -29,6 +29,7 @@ TICKERS = [
     'QCOM',
     'SBUX',
     'SCO',
+    'SHOP',
     'SNAP',
     'SPY',
     'ROKU',
