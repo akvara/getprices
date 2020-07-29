@@ -9,6 +9,7 @@ TICKERS = [
     'BHC',
     'BYND',
     'CGC',
+    'COUP',
     'DNR',
     'DOCU',
     'FB',
@@ -16,10 +17,15 @@ TICKERS = [
     'GS',
     'GOOG',
     'GILD',
+    'INTC',
     'LMT',
     'LYFT',
     'MU',
+    'MS',
+    'MSFT',
+    'MRNA',
     'NFLX',
+    'NKLA',
     'NMM',
     'NOW',
     'NVDA',
@@ -34,6 +40,7 @@ TICKERS = [
     'ROKU',
     'TEVA',
     'TSLA',
+    'TTD',
     'TWLO',
     'TWTR',
     'UA',
@@ -46,7 +53,7 @@ TICKERS = [
     # EU
     'PDX.ST',
     # EU ETF
-    # 'VUSA.AS',
+    'VUSA.AS',
     # 'CSPX.AS',
     # 'EMAE.PA',
     # 'CNDX.AS',
@@ -85,6 +92,7 @@ TICKERS = [
     'LNA1L.VS',
     'NTU1L.VS',
     'PTR1L.VS',
+    'PZV1L.VS',
     'SAB1L.VS',
     'TEL1L.VS',
     'VLP1L.VS',
@@ -92,7 +100,7 @@ TICKERS = [
     # Tallinn
     'CPA1T.TL',
     'HAE1T.TL',
-    'LHV1T.LT',
+    'LHV1T.TL',
     'MRK1T.TL',
     'PRF1T.TL',
     'SFG1T.TL',
@@ -115,6 +123,6 @@ HISTORY_DAYS = 7
 # """ For addition """ 5 lines
 # HISTORY_DAYS = 2000
 # TICKERS = [
-    # 'MRK1T.TL',
-    # 'IFX.DE',
+# 'MRK1T.TL',
+# 'IFX.DE',
 # ]
