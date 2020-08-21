@@ -39,6 +39,7 @@ def put_data(tickers, output_folder, history):
             try:
                 quotes = get_quotes(ticker, history)
                 for row in quotes:
+                    # print(row)
                     converted = convert_format(row.split(','), normalized_ticker)
                     if converted:
                         last = converted[C_DATE + 1][4:]
@@ -96,7 +97,12 @@ def get_page_data(symbol):
     # Code to replace possible \u002F value
     # ,"CrumbStore":{"crumb":"FWP\u002F5EFll3U"
     # FWP\u002F5EFll3U
-    lines = r.content.decode('unicode-escape').strip().replace('}', '\n')
+    try:
+        lines = r.content.decode('unicode-escape').strip().replace('}', '\n')
+    except:
+        sys.stdout.write("Something wrong in data...")
+        return cookie, ""
+    # lines = r.content.decode('unicode-escape').strip().replace('}', '\n')
     return cookie, lines.split('\n')
 
 
@@ -134,7 +140,8 @@ def fix_low(row):
 
 # ----- Format converter -----
 def convert_format(csv_arr_row, ticker):
-    if len(csv_arr_row) < 1 or csv_arr_row[C_HIGH] == 'null' or ast.literal_eval(csv_arr_row[C_HIGH]) == 0:
+    # print(len(csv_arr_row))
+    if len(csv_arr_row) <= 2 or csv_arr_row[C_HIGH] == 'null' or ast.literal_eval(csv_arr_row[C_HIGH]) == 0:
         return None
     out = list()
     out.append(ticker)
