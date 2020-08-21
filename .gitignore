@@ -3,6 +3,7 @@ quotes/*
 
 # exception to the rule
 !quotes/.gitkeep
+venv/
 
 .idea/
 __pycache__/

@@ -95,3 +95,18 @@ HISTORY_DAYS = 7
     # 'MRK1T.TL',
     # 'IFX.DE',
 # ]
+
+# """ For addition """ 5 lines
+HISTORY_DAYS = 2000
+TICKERS = [
+    'WDAY',
+    'MELI',
+    'ZM',
+    'AAPL',
+    'TSLA',
+    'SHOP',
+    'COUP',
+    'Z',
+    'NVDA',
+    'PDD',
+]
