@@ -9,35 +9,42 @@ TICKERS = [
     'BHC',
     'BYND',
     'CGC',
+    'CHGG',
+    'CLDR',
     'COUP',
+    'CRM',
+    'CRWD',
     'DNR',
     'DOCU',
     'FB',
-    'GIS',
-    'GS',
-    'GOOG',
     'GILD',
+    'GIS',
+    'GOOG',
+    'GS',
     'INTC',
     'LMT',
     'LYFT',
-    'MU',
+    'MELI',
+    'MRNA',
     'MS',
     'MSFT',
-    'MRNA',
+    'MU',
     'NFLX',
     'NKLA',
     'NMM',
     'NOW',
     'NVDA',
     'OMER',
+    'PDD',
     'PENN',
+    'PINS',
     'QCOM',
+    'ROKU',
     'SBUX',
     'SCO',
     'SHOP',
     'SNAP',
     'SPY',
-    'ROKU',
     'TEVA',
     'TSLA',
     'TTD',
@@ -47,7 +54,9 @@ TICKERS = [
     'UBER',
     'UI',
     'USAK',
+    'WDAY',
     'XOM',
+    'Z',
     'ZM',
 
     # EU
@@ -61,8 +70,8 @@ TICKERS = [
     # 'XAD1.MI',
     'SXR8.DE',
     '4GLD.DE',
-    'EUNL.DE',
-    'IFX.DE',
+    # 'EUNL.DE',
+    # 'IFX.DE',
     'VZLC.SG',
 
     # Indices
@@ -113,31 +122,28 @@ TICKERS = [
     # etc
     'BTC-USD',
     'ETH-USD',
-    'CL=F',
-    'BZ=F',
+    # 'CL=F',
+    # 'BZ=F',
     'GLD',
 ]
 
 HISTORY_DAYS = 7
 
-# """ For addition """ 5 lines
+# # """ For addition """ 5 lines
 # HISTORY_DAYS = 2000
 # TICKERS = [
-# 'MRK1T.TL',
-# 'IFX.DE',
+#     "SQ", "CHWY",
 # ]
 
-# """ For addition """ 5 lines
-HISTORY_DAYS = 2000
-TICKERS = [
-    'WDAY',
-    'MELI',
-    'ZM',
-    'AAPL',
-    'TSLA',
-    'SHOP',
-    'COUP',
-    'Z',
-    'NVDA',
-    'PDD',
-]
+# CRWD
+# STNE
+# SQ
+# VCYT
+# IIPR
+# NVTA
+# QTWO
+# PINS
+# FVRR
+# CHWY
+# ARCT
+# CYRX
