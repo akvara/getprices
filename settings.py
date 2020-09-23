@@ -17,6 +17,7 @@ TICKERS = [
     'DNR',
     'DOCU',
     'FB',
+    'FVRR',
     'GILD',
     'GIS',
     'GOOG',
@@ -38,6 +39,7 @@ TICKERS = [
     'PDD',
     'PENN',
     'PINS',
+    'PTON',
     'QCOM',
     'ROKU',
     'SBUX',
@@ -45,6 +47,7 @@ TICKERS = [
     'SHOP',
     'SNAP',
     'SPY',
+    'SQ',
     'TEVA',
     'TSLA',
     'TTD',
@@ -55,6 +58,7 @@ TICKERS = [
     'UI',
     'USAK',
     'WDAY',
+    "WKHS",
     'XOM',
     'Z',
     'ZM',
@@ -132,7 +136,7 @@ HISTORY_DAYS = 7
 # # """ For addition """ 5 lines
 # HISTORY_DAYS = 2000
 # TICKERS = [
-#     "SQ", "CHWY",
+#     "PTON",
 # ]
 
 # CRWD
