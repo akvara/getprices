@@ -26,7 +26,6 @@ TICKERS = [
     'INTC',
     'LMT',
     'LYFT',
-    'MELI',
     'MRNA',
     'MS',
     'MSFT',
@@ -42,9 +41,9 @@ TICKERS = [
     'PINS',
     'PTON',
     'QCOM',
+    'QTWO',
     'ROKU',
     'SBUX',
-    'SCO',
     'SHOP',
     'SNAP',
     'SPY',
@@ -135,20 +134,20 @@ TICKERS = [
 HISTORY_DAYS = 7
 
 # # """ For addition """ 5 lines
-# HISTORY_DAYS = 2000
-# TICKERS = [
-#     "PTON",
-# ]
+HISTORY_DAYS = 2000
+TICKERS = [
+    'FVRR',
+    'PDD',
+    'PINS',
+    'PTON',
+    'SQ',
+    'QTWO',
+]
 
-# CRWD
 # STNE
-# SQ
 # VCYT
 # IIPR
 # NVTA
-# QTWO
-# PINS
-# FVRR
 # CHWY
 # ARCT
 # CYRX
