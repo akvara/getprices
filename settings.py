@@ -134,15 +134,15 @@ TICKERS = [
 HISTORY_DAYS = 7
 
 # # """ For addition """ 5 lines
-HISTORY_DAYS = 2000
-TICKERS = [
-    'FVRR',
-    'PDD',
-    'PINS',
-    'PTON',
-    'SQ',
-    'QTWO',
-]
+# HISTORY_DAYS = 2000
+# TICKERS = [
+#     'FVRR',
+#     'PDD',
+#     'PINS',
+#     'PTON',
+#     'SQ',
+#     'QTWO',
+# ]
 
 # STNE
 # VCYT
