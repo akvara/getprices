@@ -19,6 +19,7 @@ TICKERS = [
     'DOCU',
     'FB',
     'FVRR',
+    'FSLY',
     'GILD',
     'GIS',
     'GOOG',
@@ -48,6 +49,7 @@ TICKERS = [
     'SNAP',
     'SPY',
     'SQ',
+    'SUP',
     'TEVA',
     'TSLA',
     'TTD',
@@ -63,7 +65,6 @@ TICKERS = [
     'XOM',
     'ZM',
     'ETSY',
-    'FSLY',
     'VEEV',
     'QTWO',
 
@@ -138,10 +139,10 @@ TICKERS = [
 HISTORY_DAYS = 7
 
 # # """ For addition """ 5 lines
-HISTORY_DAYS = 2000
-TICKERS = [
-    'FSLY',
-]
+# HISTORY_DAYS = 2000
+# TICKERS = [
+#     'FSLY',
+# ]
 
 # STNE
 # VCYT
