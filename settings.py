@@ -104,6 +104,7 @@ TICKERS = [
     'AUG1L.VS',
     'EWA1L.RG',
     'GRG1L.VS',
+    'IGN1L.VS',
     'IVL1L.VS',
     'KNF1L.VS',
     'LGD1L.VS',
