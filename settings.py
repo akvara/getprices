@@ -32,6 +32,7 @@ TICKERS = [
     'MSFT',
     'MU',
     'NFLX',
+    'NIO',
     'NKLA',
     'NMM',
     'NOW',
