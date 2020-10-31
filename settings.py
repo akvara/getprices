@@ -16,12 +16,14 @@ TICKERS = [
     'COUP',
     'CRM',
     'CRWD',
+    'DDOG',
     'DOCU',
     'FB',
     'FVRR',
     'GILD',
     'GIS',
     'GOOG',
+    'GRWG',
     'GS',
     'INTC',
     'LMT',
@@ -30,6 +32,7 @@ TICKERS = [
     'MS',
     'MSFT',
     'MU',
+    'NIO',
     'NFLX',
     'NKLA',
     'NMM',
@@ -99,6 +102,7 @@ TICKERS = [
     'AUG1L.VS',
     'EWA1L.RG',
     'GRG1L.VS',
+    'IGN1L.VS',
     'IVL1L.VS',
     'KNF1L.VS',
     'LGD1L.VS',
@@ -134,15 +138,10 @@ TICKERS = [
 HISTORY_DAYS = 7
 
 # # """ For addition """ 5 lines
-# HISTORY_DAYS = 2000
-# TICKERS = [
-#     'FVRR',
-#     'PDD',
-#     'PINS',
-#     'PTON',
-#     'SQ',
-#     'QTWO',
-# ]
+HISTORY_DAYS = 2000
+TICKERS = [
+    'DDOG',
+]
 
 # STNE
 # VCYT
