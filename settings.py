@@ -41,6 +41,7 @@ TICKERS = [
     'NVDA',
     'OMER',
     'PDD',
+    'PFE',
     'PENN',
     'PINS',
     'PTON',
@@ -142,16 +143,8 @@ TICKERS = [
 
 HISTORY_DAYS = 7
 
-# # """ For addition """ 5 lines
+# """ For addition """ 5 lines
 # HISTORY_DAYS = 2000
 # TICKERS = [
-#     'FSLY',
+#     'PFE',
 # ]
-
-# STNE
-# VCYT
-# IIPR
-# NVTA
-# CHWY
-# ARCT
-# CYRX
