@@ -2,11 +2,13 @@ TICKERS = [
     # USA
     'AAPL',
     'ABBV',
+    'ALGN',
     'AMAT',
     'AMD',
     'AMZN',
     'APPS',
     'BA',
+    'BABA',
     'BHC',
     'BYND',
     'CCL',
@@ -18,13 +20,13 @@ TICKERS = [
     'CRWD',
     'DDOG',
     'DOCU',
+    'FCEL',
     'FB',
     'FVRR',
     'FSLY',
     'GILD',
     'GIS',
     'GOOG',
-    'GRWG',
     'GS',
     'INTC',
     'LMT',
@@ -42,8 +44,8 @@ TICKERS = [
     'OMER',
     'PDD',
     'PFE',
-    'PENN',
     'PINS',
+    'PLTR',
     'PTON',
     'QCOM',
     'QTWO',
@@ -64,6 +66,7 @@ TICKERS = [
     'UI',
     'USAK',
     'WDAY',
+    'WISA',
     'WKHS',
     'WORK',
     'XOM',
@@ -143,8 +146,8 @@ TICKERS = [
 
 HISTORY_DAYS = 7
 
-# """ For addition """ 5 lines
-# HISTORY_DAYS = 2000
+# """ For addition """ 4 lines
+# HISTORY_DAYS = 200
 # TICKERS = [
-#     'PFE',
+#     'WISA',
 # ]
