@@ -150,7 +150,7 @@ TICKERS = [
 
 HISTORY_DAYS = 7
 
-""" For addition """ 4 lines
+# """ For addition """ 4 lines
 HISTORY_DAYS = 2000
 TICKERS = [
     'FCEL',
