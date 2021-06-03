@@ -74,6 +74,10 @@ TICKERS = [
     'ETSY',
     'VEEV',
     'QTWO',
+    'FCEL',
+    'QDEL',
+    'ENVB',
+    'BBBY',
 
     # EU
     'PDX.ST',
@@ -146,8 +150,11 @@ TICKERS = [
 
 HISTORY_DAYS = 7
 
-# """ For addition """ 4 lines
-# HISTORY_DAYS = 200
-# TICKERS = [
-#     'WISA',
-# ]
+""" For addition """ 4 lines
+HISTORY_DAYS = 2000
+TICKERS = [
+    'FCEL',
+    'QDEL',
+    'ENVB',
+    'BBBY',
+]
