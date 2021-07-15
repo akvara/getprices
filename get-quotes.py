@@ -23,6 +23,10 @@ OUTPUT_FOLDER = '/home/andrius/MEGA/OMX/'
 
 QUERY_URL = "https://query1.finance.yahoo.com/v7/finance/download/{}?period1={}&period2={}&interval=1d&events=history&crumb={}"
 
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:89.0) Gecko/20100101 Firefox/89.0',
+}
+
 
 def put_data(tickers, output_folder, history):
     output_file = output_folder + OUTPUT_FILE_NAME
@@ -85,12 +89,15 @@ def get_cookie_value(r):
 
 
 def get_page_data(symbol):
-    url = "https://finance.yahoo.com/quote/%s/?p=%s" % (symbol, symbol)
+    # https://finance.yahoo.com/quote/AAPL/history?p=AAPL
+    url = "https://finance.yahoo.com/quote/%s/history?p=%s" % (symbol, symbol)
     try:
-        r = requests.get(url, timeout=10)
+        r = requests.get(url, timeout=10, headers=headers)
     except ConnectionError:
+        print("ConnectionError")
         return None, None
     except RequestException:
+        print("RequestException")
         return None, None
     cookie = get_cookie_value(r)
 
@@ -140,7 +147,6 @@ def fix_low(row):
 
 # ----- Format converter -----
 def convert_format(csv_arr_row, ticker):
-    # print(len(csv_arr_row))
     if len(csv_arr_row) <= 2 or csv_arr_row[C_HIGH] == 'null' or ast.literal_eval(csv_arr_row[C_HIGH]) == 0:
         return None
     out = list()
@@ -165,5 +171,4 @@ if __name__ == '__main__':
         history = int(sys.argv[2])
     if len(sys.argv) > 3:
         tickers = [sys.argv[3]]
-
     put_data(tickers, output_folder, history)
