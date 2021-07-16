@@ -21,10 +21,11 @@ C_VOLUME = 6
 OUTPUT_FILE_NAME = 'CSV.csv'
 OUTPUT_FOLDER = '/home/andrius/MEGA/OMX/'
 
-QUERY_URL = "https://query1.finance.yahoo.com/v7/finance/download/{}?period1={}&period2={}&interval=1d&events=history&crumb={}"
+QUERY_URL = "https://query1.finance.yahoo.com/v7/finance/download/{}?period1={}&period2={}&interval=1d&events=history&includeAdjustedClose=true"
 
 headers = {
-    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:89.0) Gecko/20100101 Firefox/89.0',
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36',
+    'Referer': 'http://linuxsecrets.com/'
 }
 
 
@@ -123,16 +124,17 @@ def get_cookie_crumb(symbol):
 def get_quotes(symbol, history):
     start_date = int(time.mktime((datetime.datetime.now() + datetime.timedelta(-history)).timetuple()))
     end_date = int(time.time())
-    cookie, crumb = get_cookie_crumb(symbol)
-    return get_data(symbol, start_date, end_date, cookie, crumb)
+    # cookie, crumb = get_cookie_crumb(symbol)
+    # return get_data(symbol, start_date, end_date, cookie, crumb)
+    return get_data(symbol, start_date, end_date, '', '')
 
 
 def get_data(symbol, start_date, end_date, cookie, crumb):
-    if not cookie:
-        return None
-    url = QUERY_URL.format(symbol, start_date, end_date, crumb)
+    url = QUERY_URL.format(symbol, start_date, end_date)
     try:
-        response = requests.get(url, cookies=cookie, timeout=15)
+        response = requests.get(url, timeout=15, headers=headers)
+        if response.status_code != 200:
+            print("Error:", response.status_code)
     except (ConnectionError, ReadTimeout):
         return None
     data = [s.strip() for s in response.text.splitlines()]

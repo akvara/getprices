@@ -158,7 +158,3 @@ HISTORY_DAYS = 7
 # TICKERS = [
 #     'BBBY',
 # ]
-# HISTORY_DAYS = 20
-# TICKERS = [
-#     'BBBY',
-# ]
