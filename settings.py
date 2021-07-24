@@ -151,7 +151,7 @@ TICKERS = [
     'GLD',
 ]
 
-HISTORY_DAYS = 7
+HISTORY_DAYS = 700
 
 # """ For addition """ 4 lines
 # HISTORY_DAYS = 20
