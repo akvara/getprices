@@ -97,7 +97,7 @@ TICKERS = [
     '4GLD.DE',
     # 'EUNL.DE',
     # 'IFX.DE',
-    'VZLC.SG',
+    # 'VZLC.SG',
 
     # Indices
     '^GSPC',
@@ -112,7 +112,6 @@ TICKERS = [
     'OLF1R.RG',
     'RKB1R.RG',
     'SAF1R.RG',
-    'VSS1R.RG',
     # Vilnius
     'AMG1L.VS',
     'APG1L.VS',
