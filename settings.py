@@ -150,10 +150,10 @@ TICKERS = [
     'GLD',
 ]
 
-HISTORY_DAYS = 700
+HISTORY_DAYS = 50
 
 # """ For addition """ 4 lines
-# HISTORY_DAYS = 20
+# HISTORY_DAYS = 100
 # TICKERS = [
 #     'BBBY',
 # ]
