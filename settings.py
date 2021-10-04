@@ -72,7 +72,6 @@ TICKERS = [
     'WDAY',
     'WISA',
     'WKHS',
-    'WORK',
     'XOM',
     'ZM',
     'ETSY',
@@ -86,6 +85,7 @@ TICKERS = [
 
     # EU
     'PDX.ST',
+    'KCO.DE',
     # EU ETF
     'VUSA.AS',
     # 'CSPX.AS',
@@ -150,10 +150,10 @@ TICKERS = [
     'GLD',
 ]
 
-HISTORY_DAYS = 700
+HISTORY_DAYS = 50
 
 # """ For addition """ 4 lines
-# HISTORY_DAYS = 20
+# HISTORY_DAYS = 1000
 # TICKERS = [
-#     'BBBY',
+#     'KCO.DE',
 # ]
