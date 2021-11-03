@@ -17,6 +17,7 @@ TICKERS = [
     'CHGG',
     'CLDR',
     'COIN',
+    'COP',
     'COUP',
     'CRM',
     'CVS',
@@ -68,6 +69,7 @@ TICKERS = [
     'UA',
     'UBER',
     'UI',
+    'UONEK',
     'USAK',
     'WDAY',
     'WISA',
@@ -132,6 +134,7 @@ TICKERS = [
     'ZMP1L.VS',
     # Tallinn
     'CPA1T.TL',
+    'EGR1T.TL',
     'HAE1T.TL',
     'LHV1T.TL',
     'MRK1T.TL',
@@ -155,5 +158,6 @@ HISTORY_DAYS = 50
 # """ For addition """ 4 lines
 # HISTORY_DAYS = 1000
 # TICKERS = [
-#     'KCO.DE',
+#     'UONEK',
+#     'COP',
 # ]
