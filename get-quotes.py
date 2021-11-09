@@ -44,7 +44,6 @@ def put_data(tickers, output_folder, history):
             try:
                 quotes = get_quotes(ticker, history)
                 for row in quotes:
-                    # print(row)
                     converted = convert_format(row.split(','), normalized_ticker)
                     if converted:
                         last = converted[C_DATE + 1][4:]
@@ -135,6 +134,7 @@ def get_data(symbol, start_date, end_date, cookie, crumb):
         response = requests.get(url, timeout=15, headers=headers)
         if response.status_code != 200:
             print("Error:", response.status_code)
+            return None
     except (ConnectionError, ReadTimeout):
         return None
     data = [s.strip() for s in response.text.splitlines()]
