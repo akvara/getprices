@@ -19,6 +19,7 @@ TICKERS = [
     'COIN',
     'COP',
     'COUP',
+    'COST',
     'CRM',
     'CVS',
     'CRWD',
@@ -158,6 +159,5 @@ HISTORY_DAYS = 50
 # """ For addition """ 4 lines
 # HISTORY_DAYS = 1000
 # TICKERS = [
-#     'UONEK',
-#     'COP',
+#     'COST',
 # ]
