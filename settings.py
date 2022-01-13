@@ -12,6 +12,7 @@ TICKERS = [
     'BABA',
     'BHC',
     'BYND',
+    'BTI',
     'CCL',
     'CGC',
     'CHGG',
@@ -83,7 +84,7 @@ TICKERS = [
     'FCEL',
     'QDEL',
     'ENVB',
-    'BBBY',
+    'WB',
 
     # EU
     'PDX.ST',
@@ -142,7 +143,7 @@ TICKERS = [
     'TAL1T.TL',
     'TKM1T.TL',
     'TSM1T.TL',
-    'TVEAT.TL',
+    'TVE1T.TL',
     'NHCBHFFT.TL',
 
     # etc
@@ -158,6 +159,6 @@ HISTORY_DAYS = 50
 # """ For addition """ 4 lines
 # HISTORY_DAYS = 1000
 # TICKERS = [
-#     'UONEK',
-#     'COP',
+#     'BTI',
+#     'WB',
 # ]
