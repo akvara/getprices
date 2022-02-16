@@ -16,10 +16,10 @@ TICKERS = [
     'CCL',
     'CGC',
     'CHGG',
-    'CLDR',
     'COIN',
     'COP',
     'COUP',
+    'COST',
     'CRM',
     'CVS',
     'CRWD',
@@ -75,6 +75,7 @@ TICKERS = [
     'WDAY',
     'WISA',
     'WKHS',
+    'WB',
     'XOM',
     'ZM',
     'ETSY',
@@ -85,6 +86,9 @@ TICKERS = [
     'QDEL',
     'ENVB',
     'WB',
+    'BBBY',
+    'ROOT',
+    'SPOT',
 
     # EU
     'PDX.ST',
@@ -161,4 +165,6 @@ HISTORY_DAYS = 50
 # TICKERS = [
 #     'BTI',
 #     'WB',
+#     'ROOT',
+#     'SPOT',
 # ]
