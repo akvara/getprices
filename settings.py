@@ -6,6 +6,7 @@ TICKERS = [
     'ALGN',
     'AMAT',
     'AMD',
+    'AMR',
     'AMZN',
     'APPS',
     'BA',
@@ -116,7 +117,6 @@ TICKERS = [
     # Riga
     'BAL1R.RG',
     'GZE1R.RG',
-    'OLF1R.RG',
     'RKB1R.RG',
     'SAF1R.RG',
     # Vilnius
@@ -161,10 +161,8 @@ TICKERS = [
 HISTORY_DAYS = 50
 
 # """ For addition """ 4 lines
-# HISTORY_DAYS = 1000
+# HISTORY_DAYS = 2000
 # TICKERS = [
-#     'BTI',
-#     'WB',
-#     'ROOT',
-#     'SPOT',
+#     'EWA1L.RG',
+#         'AMR',
 # ]
